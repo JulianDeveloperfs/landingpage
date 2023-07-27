@@ -11993,20 +11993,20 @@ textarea.form-control-lg {
   color: #000;
 }
 
-.col-lg {
+.col-lg-3 {
   background: #000;
   color: #fff;
   border: 0.1px solid #343a40;
   padding: 20px;
 }
-.col-lg li {
+.col-lg-3 li {
   padding-left: 5px;
   padding-top: 2px;
 }
-.col-lg h2, .col-lg .h2 {
+.col-lg-3 h2, .col-lg-3 .h2 {
   font-size: 2rem;
 }
-.col-lg p {
+.col-lg-3 p {
   font-size: 0.9rem;
   color: #adb5bd;
 }
@@ -12049,12 +12049,65 @@ textarea.form-control-lg {
   justify-content: center;
 }
 
+.hovered {
+  padding: 0;
+}
+
+.col-one-hovered {
+  background: #fff;
+  color: #000;
+  transition: 500ms;
+}
+
+.video-properties {
+  transition: 1ms;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .inactive {
   display: none;
 }
 
-.hover {
-  background: #dbff00;
+.hvr-shutter-out-horizontal {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  background: #000;
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+
+.hvr-shutter-out-horizontal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: 50%;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
+  color: #000;
+}
+
+.hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
+  transform: scaleX(1);
+}
+
+.custom-col-lg {
+  width: 25%;
 }
 
 @media (min-width: 960px) {
@@ -12067,5 +12120,18 @@ textarea.form-control-lg {
     padding-top: 0vh;
     position: sticky;
     top: 0;
+  }
+  .col-lg-3 {
+    height: 100vh;
+  }
+  .col-lg-3 h2, .col-lg-3 .h2 {
+    padding-top: 30vh;
+    font-size: 4rem;
+    width: 80%;
+  }
+  .col-lg-3 p {
+    font-size: 0.9rem;
+    color: #000;
+    margin-top: 45vh;
   }
 }/*# sourceMappingURL=styles.css.map */

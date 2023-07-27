@@ -29,11 +29,12 @@ $container-max-widths: (
         }
     }
 }
-    .col-lg {
+    .col-lg-3 {
         background: $black;
         color: $white;
         border: .1px solid $gray-800;
         padding: 20px;
+        
 
         li{
             padding-left: 5px;
@@ -86,14 +87,70 @@ $container-max-widths: (
         justify-content: center;
     }
 
-
+    .hovered {
+        padding: 0;
+    }
+    .col-one-hovered{
+        background: $white;
+        color: $black;
+        transition: 500ms;
+    }
+    .video-properties{
+        transition: 1ms;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    
 .inactive {
     display: none;
 }
 
-.hover {
-        background: $nav-button-color;
-}
+.hvr-shutter-out-horizontal {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    background: $black;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-shutter-out-horizontal:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $white;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
+    color:$black;
+  }
+  .hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+  .custom-col-lg {
+    width: 25%; 
+  }
+
 
 @media (min-width: 960px) {
     .card {
@@ -106,4 +163,18 @@ $container-max-widths: (
         position: sticky;
         top:0;
   }
+  .col-lg-3 {
+      height: 100vh;
+    
+    h2{
+        padding-top: 30vh;
+        font-size: 4rem;
+        width: 80%;
+    }
+    p{
+        font-size: 0.9rem;
+        color: $black;
+        margin-top: 45vh;
+    }
+    }
 }
