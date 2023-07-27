@@ -1,0 +1,109 @@
+
+$nav-button-color: #dbff00;
+$container-max-widths: (
+  sm: 540px,
+  md: 768px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+.navbar{
+    padding: 0;
+    .container-fluid{
+        background: $black;
+        height: 8vh;
+        svg{
+            color: $nav-button-color;
+            font-size: 2rem;
+            margin-left: 1vh;
+            margin-top: 0.5vh;
+        }
+        img{
+            object-fit: cover;
+        }
+        button{
+            background-color:$nav-button-color;
+            color: $black;
+        }
+    }
+}
+    .col-lg {
+        background: $black;
+        color: $white;
+        border: .1px solid $gray-800;
+        padding: 20px;
+
+        li{
+            padding-left: 5px;
+            padding-top: 2px;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        p{
+            font-size: 0.9rem;
+            color: $gray-500;
+        }
+    }
+    .work_bold-container{
+        background: $white;
+        height: 100vh;
+        padding-top: 40vh;
+        position: sticky;
+        top:0;
+
+
+        .work_bold-text {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 38vw; 
+            color: $black;
+            text-align: center;
+            
+        }}
+    
+    .card {
+        width: 40vw;
+        margin: 4vh;
+        background-color: none;
+        border: none;
+        border-radius: 0;
+        p{
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.8rem;
+        }
+    }
+
+    .right  {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .center  {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+
+.inactive {
+    display: none;
+}
+
+.hover {
+        background: $nav-button-color;
+}
+
+@media (min-width: 960px) {
+    .card {
+      width: 28vw;
+    }
+    .work_bold-container{
+        background: $white;
+        height: 80vh;
+        padding-top: 0vh;
+        position: sticky;
+        top:0;
+  }
+}
