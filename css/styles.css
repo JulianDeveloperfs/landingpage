@@ -753,7 +753,7 @@ progress {
 }
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
-    max-width: 960px;
+    max-width: 992px;
   }
 }
 @media (min-width: 1200px) {
@@ -11993,6 +11993,10 @@ textarea.form-control-lg {
   color: #000;
 }
 
+.custom-col-lg {
+  width: 25%;
+}
+
 .col-lg-3 {
   background: #000;
   color: #fff;
@@ -12037,6 +12041,15 @@ textarea.form-control-lg {
   font-size: 0.8rem;
 }
 
+.wwd-img {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  margin-top: 25vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .right {
   width: 100%;
   display: flex;
@@ -12065,6 +12078,11 @@ textarea.form-control-lg {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.hover-work {
+  color: #dee2e6;
+  transition: 2s;
 }
 
 .inactive {
@@ -12106,11 +12124,7 @@ textarea.form-control-lg {
   transform: scaleX(1);
 }
 
-.custom-col-lg {
-  width: 25%;
-}
-
-@media (min-width: 960px) {
+@media (min-width: 992px) {
   .card {
     width: 28vw;
   }

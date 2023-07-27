@@ -3,7 +3,7 @@ $nav-button-color: #dbff00;
 $container-max-widths: (
   sm: 540px,
   md: 768px,
-  lg: 960px,
+  lg: 992px,
   xl: 1140px,
   xxl: 1320px
 );
@@ -29,12 +29,14 @@ $container-max-widths: (
         }
     }
 }
+    .custom-col-lg {
+        width: 25%; 
+    }
     .col-lg-3 {
         background: $black;
         color: $white;
         border: .1px solid $gray-800;
         padding: 20px;
-        
 
         li{
             padding-left: 5px;
@@ -75,7 +77,13 @@ $container-max-widths: (
             font-size: 0.8rem;
         }
     }
-
+    .wwd-img{
+        width: 100%;
+        height: auto;
+        max-height: 60vh;
+        margin-top: 25vh;
+        object-fit: contain;
+    }
     .right  {
         width: 100%;
         display: flex;
@@ -101,6 +109,10 @@ $container-max-widths: (
         height: 100%;
         object-fit: cover;
       }
+    .hover-work{
+        color: $gray-300;
+        transition: 2s;
+    }
     
 .inactive {
     display: none;
@@ -147,12 +159,9 @@ $container-max-widths: (
     transform: scaleX(1);
   }
 
-  .custom-col-lg {
-    width: 25%; 
-  }
+  
 
-
-@media (min-width: 960px) {
+@media (min-width: 992px) {
     .card {
       width: 28vw;
     }
